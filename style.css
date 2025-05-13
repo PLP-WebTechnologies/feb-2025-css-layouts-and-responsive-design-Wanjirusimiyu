@@ -1,0 +1,82 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
+  color: white;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Layout Using Flexbox */
+.container {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+.content {
+  flex: 3;
+  background-color: #f4f4f4;
+  padding: 1rem;
+}
+.sidebar {
+  flex: 1;
+  background-color: #ddd;
+  padding: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    font-size: 0.9rem;
+  }
+
+  .content, .sidebar {
+    padding: 0.5rem;
+  }
+}
